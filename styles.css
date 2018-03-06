@@ -1,0 +1,82 @@
+/*font*/
+body{
+  font-family: 'VT323', monospace ;
+  font-size: 150%;
+}
+
+#cars{
+  height: 450px;
+}
+
+#car1, #car2, #car3, #car4{
+  display: inline-block;
+  width: 40%;
+}
+
+#upstruck{
+  display: block;
+}
+
+#upsvroom{
+  display: none;
+}
+
+#car1:hover #upstruck{
+  display: none;
+}
+
+#car1:hover #upsvroom{
+  display: block;
+}
+
+#schoolbus{
+  display: block;
+}
+
+#schoolvroom{
+  display: none;
+}
+
+#car2:hover #schoolbus{
+  display: none;
+}
+
+#car2:hover #schoolvroom{
+  display: block;
+}
+
+#priuscar{
+  display: block;
+}
+
+#priusvroom{
+  display: none;
+}
+
+#car3:hover #priuscar{
+  display: none;
+}
+
+#car3:hover #priusvroom{
+  display: block;
+}
+
+#lastRental{
+  display: block;
+}
+
+#lastvroom{
+  display: none;
+}
+
+#car4:hover #lastrental{
+  display: none;
+}
+
+#car4:hover #lastvroom{
+  display: block;
+}
+
+#questions{
+  display: none;
+}

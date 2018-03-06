@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The awesomest research car race</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  </head>
+  <body>
+    <!--Wecome message-->
+    <div id="welcome">
+      <p>Welcome to my game</p>
+    </div>
+    <!--instructions-->
+    <div id="instructions">
+      <p>Here go the instructions</p>
+    </div>
+    <!--display and choose images-->
+    <div id="cars">
+      <p>Here are the cars:</p>
+      <div id="car1">
+        <div id="upstruck"><img src="images/upsTruck.jpg" alt="UPS Truck"></div>
+        <div id="upsvroom"><img src="images/upsVroom.jpg" alt="UPS Truck vroom" onclick="chooseCar('upsTruck')"></div>
+      </div>
+      <div id="car2">
+        <div id="schoolbus"><img src="images/schoolBus.jpg" alt="School Bus"></div>
+        <div id="schoolvroom"><img src="images/schoolVroom.jpg" alt="School bus vroom" onclick="chooseCar('schoolBus')"></div>
+      </div>
+        <div id="car3">
+        <div id="priuscar"><img src="images/priusCar.jpg" alt="Prius"></div>
+      <div id="priusvroom"><img src="images/priusVroom.jpg" alt="Prius vroom" onclick="chooseCar('priusCar')"></div>
+      </div>
+      <div id="car4">
+        <div id="lastrental"><img src="images/lastRental.jpg" alt="Last Rental"></div>
+        <div id="lastvroom"><img src="images/lastVroom.jpg" alt="last rental vroom" onclick="chooseCar('lastRental')"></div>
+      </div>
+    </div>
+    <!--questions placeholders-->
+    <!--Press button to begin game-->
+    <input type="button" id="startbutton" name="startbutton" value="Start!" onclick="displayQuestions()">
+    <div id="questions">
+      <form id="questionform">
+        <p id="questionbody">Question goes here</p>
+        <select id="question">
+          <option id="pick">Pick your answer</option>
+          <option id="option1"></option>
+          <option id="option2"></option>
+          <option id="option3"></option>
+          <option id="option4"></option>
+        </select>
+      </form>
+    </div>
+    <!--display canvas-->
+    <div id="mycanvas">
+      <canvas id="racecanvas" width="500" height="300">
+        If you can read this, your browser is shitty and doesn't support canvas.
+      </canvas>
+      <script type="text/javascript" src="carrace.js"></script>
+    </div>
+  </body>
+</html>
