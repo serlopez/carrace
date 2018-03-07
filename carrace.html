@@ -15,34 +15,47 @@
     <div id="instructions">
       <p>Here go the instructions</p>
     </div>
+    <div id="name">
+      <form>
+        <p>Enter your name:</p>
+        <input id="namefield" type="text" name="name" width="100">
+        <input id="namebutton" type="submit" name="name" value="Click me" onclick="nameAlert()">
+      </form>
+    </div>
     <!--display and choose images-->
     <div id="cars">
       <p>Here are the cars:</p>
       <div id="car1">
         <div id="upstruck"><img src="images/upsTruck.jpg" alt="UPS Truck"></div>
         <div id="upsvroom"><img src="images/upsVroom.jpg" alt="UPS Truck vroom" onclick="chooseCar('upsTruck')"></div>
+        <figcaption id="upscaption">UPS Truck</figcaption>
       </div>
       <div id="car2">
         <div id="schoolbus"><img src="images/schoolBus.jpg" alt="School Bus"></div>
         <div id="schoolvroom"><img src="images/schoolVroom.jpg" alt="School bus vroom" onclick="chooseCar('schoolBus')"></div>
+        <figcaption id="schoolcaption">School bus</figcaption>
       </div>
         <div id="car3">
         <div id="priuscar"><img src="images/priusCar.jpg" alt="Prius"></div>
-      <div id="priusvroom"><img src="images/priusVroom.jpg" alt="Prius vroom" onclick="chooseCar('priusCar')"></div>
+        <div id="priusvroom"><img src="images/priusVroom.jpg" alt="Prius vroom" onclick="chooseCar('priusCar')"></div>
+        <figcaption id="priuscaption">Prius</figcaption>
       </div>
       <div id="car4">
         <div id="lastrental"><img src="images/lastRental.jpg" alt="Last Rental"></div>
         <div id="lastvroom"><img src="images/lastVroom.jpg" alt="last rental vroom" onclick="chooseCar('lastRental')"></div>
+        <figcaption id="lastcaption">last Rental</figcaption>
       </div>
     </div>
     <!--questions placeholders-->
     <!--Press button to begin game-->
-    <input type="button" id="startbutton" name="startbutton" value="Start!" onclick="displayQuestions()">
+    <div id="startbutton">
+      <input type="button" id="startbutton" value="Start!" onclick="displayQuestions()">
+    </div>
     <div id="questions">
       <form id="questionform">
         <p id="questionbody">Question goes here</p>
         <select id="question">
-          <option id="pick">Pick your answer</option>
+          <option id="option0" value="0" selected>Pick your answer</option>
           <option id="option1"></option>
           <option id="option2"></option>
           <option id="option3"></option>
@@ -52,7 +65,7 @@
     </div>
     <!--display canvas-->
     <div id="mycanvas">
-      <canvas id="racecanvas" width="500" height="300">
+      <canvas id="racecanvas" height="300">
         If you can read this, your browser is shitty and doesn't support canvas.
       </canvas>
       <script type="text/javascript" src="carrace.js"></script>
