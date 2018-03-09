@@ -3,6 +3,7 @@ var img;
 var x=50;
 var dx=1;
 var score=0;
+var carmodel;
 var tag=prompt("If you are playing this game as a class, enter the tag given to you: ");
 var playername=prompt("Enter your name: ");
 
@@ -11,6 +12,7 @@ function chooseCar(carmodel){
   img.src="images/"+carmodel+".jpg";
   var startbutton=document.getElementById("startbutton");
   startbutton.style.display="inline-block";
+  document.getElementById("car").value="images/"+carmodel+".jpg";
   return img, carmodel;
 }
 
@@ -105,11 +107,10 @@ function moveCar(){
   }
 }
 
-function sendToDb(){
+function sendToDb(img){
   console.log(img);
   console.log("I'm here!");
   document.getElementById("tag").value=tag;
   document.getElementById("fname").value=playername;
-  document.getElementById("car").value=img;
   document.getElementById("score").value=score;
 }

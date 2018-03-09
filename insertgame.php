@@ -19,7 +19,7 @@ if(mysqli_connect_errno()){
   exit;
 }
 
-$query="INSERT INTO scoreboard VALUES(?, ?, ?, ?)";
+$query="INSERT INTO scoreboard (tag, fname, car, score) VALUES (?, ?, ?, ?)";
 $stmt=$db->prepare($query);
 $stmt->bind_param('ssss', $tag, $fname, $car, $score);
 $stmt->execute();
