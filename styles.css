@@ -4,17 +4,19 @@ body{
   font-size: 150%;
 }
 #startbutton{
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  display: none;
 }
 
 #cars{
   height: 450px;
+}
+
+#button{
+  width: 100px;
+  height: 50px;
+  background: black;
+  color: white;
+  cursor: pointer;
 }
 
 #car1, #car2, #car3, #car4{

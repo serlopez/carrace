@@ -16,12 +16,14 @@
       <p>Here go the instructions</p>
     </div>
     <div id="name">
-      <form>
-        <p>Enter your name:</p>
-        <input id="namefield" type="text" name="name" width="100">
-        <input id="namebutton" type="submit" name="name" value="Click me" onclick="nameAlert()">
-      </form>
+      <!--<form>-->
+      <!--  <p>Enter your name:</p>-->
+      <!--  <input id="namefield" type="text" name="name" width="100">-->
+      <!--  <input id="namebutton" type="submit" name="name" value="Click me" onclick="nameAlert()">-->
+      <!--</form>-->
     </div>
+    <!--Tag field-->
+    <p></p>
     <!--display and choose images-->
     <div id="cars">
       <p>Here are the cars:</p>
@@ -49,7 +51,7 @@
     <!--questions placeholders-->
     <!--Press button to begin game-->
     <div id="startbutton">
-      <input type="button" id="startbutton" value="Start!" onclick="displayQuestions()">
+      <input type="button" id="button" value="Start!" onclick="displayQuestions()">
     </div>
     <div id="questions">
       <form id="questionform">
@@ -69,6 +71,15 @@
         If you can read this, your browser is shitty and doesn't support canvas.
       </canvas>
       <script type="text/javascript" src="carrace.js"></script>
+    </div>
+    <div id="insertgame">
+      <form action="insertgame.php" method="post">
+        <p>Tag: <input id="tag" type="text" name="tag"></p>
+        <p>Name: <input id="fname" type="text" name="fname"></p>
+        <p>Car: <input id="car" type="text" name="car"></p>
+        <p>Score: <input id="score" type="text" name="score"></p>
+        <input type="submit" value="submit results">
+      </form>
     </div>
   </body>
 </html>

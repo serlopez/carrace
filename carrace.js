@@ -3,17 +3,22 @@ var img;
 var x=50;
 var dx=1;
 var score=0;
+var tag=prompt("If you are playing this game as a class, enter the tag given to you: ");
+var playername=prompt("Enter your name: ");
+
 function chooseCar(carmodel){
   img=new Image();
   img.src="images/"+carmodel+".jpg";
-  return img;
+  var startbutton=document.getElementById("startbutton");
+  startbutton.style.display="inline-block";
+  return img, carmodel;
 }
 
 //displays name
 function nameAlert(){
-  var playerName = document.getElementById("namefield").value;
-  alert("Let's play, "+playerName+"!");
-  document.getElementById("startbutton").style.color=black;
+  playerName = document.getElementById("namefield").value;
+  console.log(playerName);
+  document.getElementById("startbutton").style.color="black";
 }
 
 //displays questions
@@ -86,6 +91,7 @@ function displayQuestions(){
 
 function moveCar(){
   //moves car every time a question is answered
+  sendToDb();
   console.log(score);
   var raceCanvas=document.getElementById("racecanvas");
   raceCanvas.width=window.innerWidth;
@@ -99,6 +105,11 @@ function moveCar(){
   }
 }
 
-function sentToDb(){
-  
+function sendToDb(){
+  console.log(img);
+  console.log("I'm here!");
+  document.getElementById("tag").value=tag;
+  document.getElementById("fname").value=playername;
+  document.getElementById("car").value=img;
+  document.getElementById("score").value=score;
 }
