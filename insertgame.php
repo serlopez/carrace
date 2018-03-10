@@ -1,3 +1,9 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Insert scores into database</title>
+  </head>
+  <body>
 <?php
 // chech for inputs
 if(!isset($_POST['tag'])){
@@ -31,3 +37,5 @@ if($stmt->affected_rows > 0){
 }
 $db->close();
 ?>
+</body>
+</html>
