@@ -91,3 +91,11 @@ body{
 #questions{
   display: none;
 }
+
+#gametagspace{
+  display: inline;
+}
+
+#playernamespace{
+  display: inline;
+}

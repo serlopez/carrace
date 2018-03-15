@@ -6,13 +6,13 @@
   <body>
 <?php
 // chech for inputs
-if(!isset($_POST['tag'])){
+if(!isset($_POST['gametag'])){
   echo "<p>Not enough info</p>";
   exit;
 }
 
 //create short variable names
-$tag=strtolower(trim($_POST['tag']));
+$gametag=strtolower(trim($_POST['gametag']));
 $fname=$_POST['fname'];
 $car=$_POST['car'];
 $score=$_POST['score'];
@@ -25,9 +25,9 @@ if(mysqli_connect_errno()){
   exit;
 }
 
-$query="INSERT INTO scoreboard (tag, fname, car, score) VALUES (?, ?, ?, ?)";
+$query="INSERT INTO scoreboard (gametag, fname, car, score) VALUES (?, ?, ?, ?)";
 $stmt=$db->prepare($query);
-$stmt->bind_param('ssss', $tag, $fname, $car, $score);
+$stmt->bind_param('ssss', $gametag, $fname, $car, $score);
 $stmt->execute();
 
 if($stmt->affected_rows > 0){

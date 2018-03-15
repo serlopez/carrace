@@ -9,43 +9,34 @@
   <body>
     <!--Wecome message-->
     <div id="welcome">
-      <p>Welcome to my game</p>
+     <p>Welcome!</p>
     </div>
     <!--instructions-->
     <div id="instructions">
       <p>Here go the instructions</p>
     </div>
-    <div id="name">
-      <!--<form>-->
-      <!--  <p>Enter your name:</p>-->
-      <!--  <input id="namefield" type="text" name="name" width="100">-->
-      <!--  <input id="namebutton" type="submit" name="name" value="Click me" onclick="nameAlert()">-->
-      <!--</form>-->
-    </div>
-    <!--Tag field-->
-    <p></p>
     <!--display and choose images-->
     <div id="cars">
       <p>Here are the cars:</p>
       <div id="car1">
-        <div id="upstruck"><img src="images/upsTruck.jpg" alt="UPS Truck"></div>
-        <div id="upsvroom"><img src="images/upsVroom.jpg" alt="UPS Truck vroom" onclick="chooseCar('upsTruck')"></div>
+        <div id="upstruck"><img src="images/upsTruck.png" alt="UPS Truck"></div>
+        <div id="upsvroom"><img src="images/upsVroom.png" alt="UPS Truck vroom" onclick="chooseCar('upsTruck')"></div>
         <figcaption id="upscaption">UPS Truck</figcaption>
       </div>
       <div id="car2">
-        <div id="schoolbus"><img src="images/schoolBus.jpg" alt="School Bus"></div>
-        <div id="schoolvroom"><img src="images/schoolVroom.jpg" alt="School bus vroom" onclick="chooseCar('schoolBus')"></div>
+        <div id="schoolbus"><img src="images/schoolBus.png" alt="School Bus"></div>
+        <div id="schoolvroom"><img src="images/schoolVroom.png" alt="School bus vroom" onclick="chooseCar('schoolBus')"></div>
         <figcaption id="schoolcaption">School bus</figcaption>
       </div>
         <div id="car3">
-        <div id="priuscar"><img src="images/priusCar.jpg" alt="Prius"></div>
-        <div id="priusvroom"><img src="images/priusVroom.jpg" alt="Prius vroom" onclick="chooseCar('priusCar')"></div>
+        <div id="priuscar"><img src="images/priusCar.png" alt="Prius"></div>
+        <div id="priusvroom"><img src="images/priusVroom.png" alt="Prius vroom" onclick="chooseCar('priusCar')"></div>
         <figcaption id="priuscaption">Prius</figcaption>
       </div>
       <div id="car4">
-        <div id="lastrental"><img src="images/lastRental.jpg" alt="Last Rental"></div>
-        <div id="lastvroom"><img src="images/lastVroom.jpg" alt="last rental vroom" onclick="chooseCar('lastRental')"></div>
-        <figcaption id="lastcaption">last Rental</figcaption>
+        <div id="lastrental"><img src="images/lastRental.png" alt="Last Rental"></div>
+        <div id="lastvroom"><img src="images/lastVroom.png" alt="last rental vroom" onclick="chooseCar('lastRental')"></div>
+        <figcaption id="lastcaption">Last rental</figcaption>
       </div>
     </div>
     <!--questions placeholders-->
@@ -67,17 +58,17 @@
     </div>
     <!--display canvas-->
     <div id="mycanvas">
-      <canvas id="racecanvas" height="300">
+      <canvas id="racecanvas">
         If you can read this, your browser is shitty and doesn't support canvas.
       </canvas>
       <script type="text/javascript" src="carrace.js"></script>
     </div>
     <div id="insertgame">
       <form action="insertgame.php" method="post">
-        <p>Tag: <input id="tag" type="text" name="tag"></p>
-        <p>Name: <input id="fname" type="text" name="fname"></p>
-        <p>Car: <input id="car" type="text" name="car"></p>
-        <p>Score: <input id="score" type="text" name="score"></p>
+        <p>gametag: <input id="gametag" type="text" name="gametag">
+        Name: <input id="fname" type="text" name="playername">
+        Car: <input id="car" type="text" name="car">
+        Score: <input id="score" type="text" name="score"></p>
         <input type="submit" value="submit results">
       </form>
     </div>
