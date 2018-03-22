@@ -21,19 +21,14 @@
       <div id="car1">
         <div id="upstruck"><img src="images/upsTruck.png" alt="UPS Truck"></div>
         <div id="upsvroom"><img src="images/upsVroom.png" alt="UPS Truck vroom" onclick="chooseCar('upsTruck')"></div>
-        <figcaption id="upscaption">UPS Truck</figcaption>
+        <figcaption id="upscaption">UPS truck</figcaption>
       </div>
       <div id="car2">
         <div id="schoolbus"><img src="images/schoolBus.png" alt="School Bus"></div>
         <div id="schoolvroom"><img src="images/schoolVroom.png" alt="School bus vroom" onclick="chooseCar('schoolBus')"></div>
         <figcaption id="schoolcaption">School bus</figcaption>
       </div>
-        <div id="car3">
-        <div id="priuscar"><img src="images/priusCar.png" alt="Prius"></div>
-        <div id="priusvroom"><img src="images/priusVroom.png" alt="Prius vroom" onclick="chooseCar('priusCar')"></div>
-        <figcaption id="priuscaption">Prius</figcaption>
-      </div>
-      <div id="car4">
+      <div id="car3">
         <div id="lastrental"><img src="images/lastRental.png" alt="Last Rental"></div>
         <div id="lastvroom"><img src="images/lastVroom.png" alt="last rental vroom" onclick="chooseCar('lastRental')"></div>
         <figcaption id="lastcaption">Last rental</figcaption>
@@ -42,7 +37,7 @@
     <!--questions placeholders-->
     <!--Press button to begin game-->
     <div id="startbutton">
-      <input type="button" id="button" value="Start!" onclick="displayQuestions()">
+      <input type="button" id="button" value="Start!" onclick="placeCar()">
     </div>
     <div id="questions">
       <form id="questionform">
@@ -61,16 +56,16 @@
       <canvas id="racecanvas">
         If you can read this, your browser is shitty and doesn't support canvas.
       </canvas>
-      <script type="text/javascript" src="carrace.js"></script>
     </div>
     <div id="insertgame">
       <form action="insertgame.php" method="post">
-        <p>gametag: <input id="gametag" type="text" name="gametag">
-        Name: <input id="fname" type="text" name="playername">
-        Car: <input id="car" type="text" name="car">
+        <p>Today's race: <input id="gametag" type="text" name="gametag">
+        Driver: <input id="fname" type="text" name="playername">
+        <input id="car" type="text" name="car">
         Score: <input id="score" type="text" name="score"></p>
         <input type="submit" value="submit results">
       </form>
     </div>
+    <script type="text/javascript" src="carrace.js"></script>
   </body>
 </html>

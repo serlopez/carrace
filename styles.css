@@ -3,12 +3,14 @@ body{
   font-family: 'VT323', monospace ;
   font-size: 150%;
 }
-#startbutton{
-  display: none;
+
+#question, #option0, #option1, #option2, #option3, #option4{
+  font-family: 'VT323', monospace ;
+  font-size: 100%;
 }
 
-#cars{
-  height: 450px;
+#startbutton{
+  display: none;
 }
 
 #button{
@@ -19,9 +21,9 @@ body{
   cursor: pointer;
 }
 
-#car1, #car2, #car3, #car4{
-  display: inline-block;
-  width: 40%;
+#car1, #car2, #car3{
+  display: block;
+  margin: 40px;
 }
 
 #upstruck{
@@ -56,23 +58,7 @@ body{
   display: block;
 }
 
-#priuscar{
-  display: block;
-}
-
-#priusvroom{
-  display: none;
-}
-
-#car3:hover #priuscar{
-  display: none;
-}
-
-#car3:hover #priusvroom{
-  display: block;
-}
-
-#lastRental{
+#lastrental{
   display: block;
 }
 
@@ -80,11 +66,11 @@ body{
   display: none;
 }
 
-#car4:hover #lastrental{
+#car3:hover #lastrental{
   display: none;
 }
 
-#car4:hover #lastvroom{
+#car3:hover #lastvroom{
   display: block;
 }
 
@@ -98,4 +84,13 @@ body{
 
 #playernamespace{
   display: inline;
+}
+
+#insertgame{
+  display: block;
+  background-color: #000000;
+}
+
+#car{
+  display: none;
 }
